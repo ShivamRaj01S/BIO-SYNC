@@ -1,0 +1,9 @@
+export const USER_ROLES = ['donor', 'patient', 'hospital', 'admin'];
+export const SELF_REGISTER_ROLES = ['donor', 'patient', 'hospital'];
+export const USER_STATUS = ['active', 'suspended', 'blocked'];
+export const AVAILABILITY_STATUS = ['available', 'busy', 'inactive'];
+export const REQUEST_TYPES = ['blood', 'organ'];
+export const URGENCY_LEVELS = ['low', 'medium', 'critical'];
+export const REQUEST_STATUS = ['pending', 'matched', 'completed', 'cancelled'];
+export const MATCH_STATUS = ['notified', 'accepted', 'declined', 'expired', 'cancelled'];
+export const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];

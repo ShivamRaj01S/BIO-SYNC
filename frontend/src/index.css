@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(183, 28, 60, 0.12), transparent 34%),
+    radial-gradient(circle at top right, rgba(139, 21, 56, 0.16), transparent 28%),
+    linear-gradient(180deg, #fff8f8 0%, #f7f4f3 100%);
+}
+
+body {
+  @apply font-sans text-medical-dark bg-medical-light antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(139, 21, 56, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 21, 56, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 95%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: #8b1538;
+  color: white;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-2xl font-semibold bg-blood-red text-white shadow-[0_14px_30px_rgba(139,21,56,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-blood-dark hover:shadow-[0_20px_40px_rgba(92,14,38,0.28)] focus:outline-none focus:ring-2 focus:ring-blood-red focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-2xl font-semibold bg-white/80 text-blood-red border border-blood-red/20 shadow-[0_10px_25px_rgba(55,65,81,0.07)] transition-all duration-300 hover:-translate-y-0.5 hover:border-blood-red/40 hover:bg-white hover:shadow-[0_18px_35px_rgba(55,65,81,0.10)];
+  }
+  .card {
+    @apply relative overflow-hidden rounded-[28px] border border-white/80 bg-white/80 p-6 shadow-[0_18px_55px_rgba(92,14,38,0.09)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(92,14,38,0.14)];
+  }
+  .input-field {
+    @apply w-full rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm outline-none transition-all duration-300 focus:border-blood-red/40 focus:ring-2 focus:ring-blood-red/15 focus:bg-white;
+  }
+  .page-shell {
+    @apply relative mx-auto max-w-6xl px-4 py-8;
+    animation: fade-up 480ms ease-out both;
+  }
+  .brand-mark {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blood-red text-sm font-bold tracking-[0.24em] text-white shadow-[0_16px_28px_rgba(139,21,56,0.26)];
+  }
+  .brand-pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-blood-red/15 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-blood-red shadow-sm backdrop-blur;
+  }
+  .nav-link {
+    @apply relative rounded-full px-3 py-2 text-sm font-medium text-medical-gray transition-all duration-300 hover:bg-white hover:text-blood-red;
+  }
+  .interactive-card {
+    @apply relative overflow-hidden rounded-[24px] border border-white/80 bg-white/90 p-5 shadow-[0_14px_40px_rgba(55,65,81,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-blood-red/20 hover:shadow-[0_24px_56px_rgba(92,14,38,0.14)];
+  }
+  .ambient-orb {
+    @apply absolute rounded-full blur-3xl opacity-60;
+    animation: float-soft 9s ease-in-out infinite;
+  }
+}
+
+.card::after,
+.interactive-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 45%);
+}
