@@ -173,8 +173,19 @@ blood/
 +- README.md
 ```
 
+# Project Live Deployment
+
+## Live Demo
+
+- **Frontend:** [https://frontend-url.com](https://bio-sync-s9qt.vercel.app/)
+- **Backend/API:** [https://backend-url.com](https://bio-sync.onrender.com)
+
+## Source Code
+
+- **GitHub Repository:** [https://github.com](https://github.com/ShivamRaj01S/BIO-SYNC)
 ## Notes
 
 - The frontend stores the JWT in local storage for development convenience. Use secure cookies and HTTPS for production hardening.
 - `MAPS_API_KEY` is optional because donor search currently uses MongoDB geospatial queries. Keep the variable if you later add reverse geocoding or route-distance services.
 - If you are upgrading from the older profile-based version, the server syncs legacy donor and hospital profile data into the expanded `User` schema on startup.
+  
