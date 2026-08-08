@@ -1,6 +1,6 @@
 # Blood & Organ Donor Management System
 
-Placement-ready full-stack platform for donors, patients, hospitals, and admins with role-based access, smart donor matching, emergency escalation, reliability scoring, fraud controls, and auditability.
+ Full-stack platform for donors, patients, hospitals, and admins with role-based access, smart donor matching, emergency escalation, reliability scoring, fraud controls, and auditability.
 
 ## Tech Stack Overview
 
@@ -149,27 +149,27 @@ For each pending request, the backend:
 ```text
 blood/
 +- backend/
-¦  +- src/
-¦  ¦  +- config/
-¦  ¦  +- controllers/
-¦  ¦  +- jobs/
-¦  ¦  +- middleware/
-¦  ¦  +- models/
-¦  ¦  +- routes/
-¦  ¦  +- services/
-¦  ¦  +- utils/
-¦  ¦  +- app.js
-¦  ¦  +- server.js
-¦  +- package.json
+Â¦  +- src/
+Â¦  Â¦  +- config/
+Â¦  Â¦  +- controllers/
+Â¦  Â¦  +- jobs/
+Â¦  Â¦  +- middleware/
+Â¦  Â¦  +- models/
+Â¦  Â¦  +- routes/
+Â¦  Â¦  +- services/
+Â¦  Â¦  +- utils/
+Â¦  Â¦  +- app.js
+Â¦  Â¦  +- server.js
+Â¦  +- package.json
 +- frontend/
-¦  +- src/
-¦  ¦  +- api/
-¦  ¦  +- components/
-¦  ¦  +- context/
-¦  ¦  +- pages/
-¦  ¦  +- App.jsx
-¦  ¦  +- main.jsx
-¦  +- package.json
+Â¦  +- src/
+Â¦  Â¦  +- api/
+Â¦  Â¦  +- components/
+Â¦  Â¦  +- context/
+Â¦  Â¦  +- pages/
+Â¦  Â¦  +- App.jsx
+Â¦  Â¦  +- main.jsx
+Â¦  +- package.json
 +- README.md
 ```
 
