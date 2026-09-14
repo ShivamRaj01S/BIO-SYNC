@@ -1,14 +1,97 @@
-# Blood & Organ Donor Management System
+# Blood & Organ Donor Management System - BIO SYNC
 
- Full-stack platform for donors, patients, hospitals, and admins with role-based access, smart donor matching, emergency escalation, reliability scoring, fraud controls, and auditability.
+Full-stack platform for donors, patients, hospitals, and admins with role-based access, smart donor matching, emergency escalation, reliability scoring, fraud controls, and auditability.
 
-## Tech Stack Overview
+## 🔗 Live Demo & Links
 
-- Frontend: React, React Router, Axios, Tailwind-powered CSS UI, Vite
-- Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, Google OAuth
-- Runtime services: Background workers, audit logs, rate limiting, fraud detection, in-app notifications, optional email notifications
+- **Public Deploy Link**: [bio-sync-s9qt.vercel.app](https://bio-sync-s9qt.vercel.app/)
+- **Local Application Link**: localhost frontend/backend link
+- **GitHub Repository**: https://github.com/ShivamRaj01S/BIO-SYNC
 
-## Architecture Summary
+---
+
+## 📸 Screenshots Overview
+
+Here is a visual walk-through of the platform's key features:
+
+<details>
+<summary><b>Click to view full Screenshot Walkthrough</b></summary>
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 013004.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 011928.png" width="800" />
+<img src="screenshot/Screenshot 2026-03-10 011854.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 011938.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 013004.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115130.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115656.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115731.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115831.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115843.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115900.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 115929.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 120000.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 120308.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 120321.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 120517.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 120543.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 121100.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 121124.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 121159.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 121214.png" width="800" />
+
+### Screenshot
+<img src="screenshot/Screenshot 2026-03-10 121225.png" width="800" />
+
+</details>
+
+---
+
+## 🛠️ Tech Stack Overview
+
+- **Frontend**: React, React Router, Axios, Tailwind-powered CSS UI, Vite
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose, JWT, Google OAuth
+- **Runtime services**: Background workers, audit logs, rate limiting, fraud detection, in-app notifications, optional email notifications
+
+## 🏗️ Architecture Summary
 
 This codebase now follows an ISA-style layered structure:
 
@@ -19,14 +102,14 @@ This codebase now follows an ISA-style layered structure:
 - `jobs/` for request escalation and donor availability reset workers
 - `routes/` for thin HTTP entry points
 
-## Core Role Rules
+## 👥 Core Role Rules
 
-- Donor: Maintains blood group, organ preferences, location, availability, and trust score
-- Patient: Can create blood-only requests
-- Hospital: Can create organ requests only after verification
-- Admin: Verifies hospitals, reviews audit trails, blocks users, and monitors fraud flags
+- **Donor**: Maintains blood group, organ preferences, location, availability, and trust score
+- **Patient**: Can create blood-only requests
+- **Hospital**: Can create organ requests only after verification
+- **Admin**: Verifies hospitals, reviews audit trails, blocks users, and monitors fraud flags
 
-## Environment Variables Required
+## 🔑 Environment Variables Required
 
 ### Backend
 
@@ -68,9 +151,9 @@ This codebase now follows an ISA-style layered structure:
 | `VITE_API_URL` | Yes | API base URL, usually `http://localhost:5000/api` |
 | `VITE_GOOGLE_CLIENT_ID` | Yes | Google OAuth client id for the React app |
 
-## Local Setup Guide
+## 🚀 Local Setup Guide
 
-### 1. Backend terminal
+### Screenshot
 
 ```powershell
 cd backend
@@ -80,7 +163,7 @@ npm run seed:admin
 npm run dev
 ```
 
-### 2. Frontend terminal
+### Screenshot
 
 ```powershell
 cd frontend
@@ -89,7 +172,7 @@ npm install
 npm run dev
 ```
 
-### 3. Open the app
+### Screenshot
 
 ```text
 Frontend: http://localhost:5173
@@ -102,7 +185,7 @@ The backend runs background workers automatically on server startup for:
 - donor availability reset after the medical waiting period
 - legacy donor and hospital profile sync into the richer `User` schema
 
-## System Flow
+## 🔄 System Flow
 
 The application follows this exact runtime flow:
 
@@ -116,7 +199,7 @@ The application follows this exact runtime flow:
 8. Scores updated
 9. Dashboards updated
 
-## Matching Engine Summary
+## 🧠 Matching Engine Summary
 
 For each pending request, the backend:
 
@@ -126,7 +209,7 @@ For each pending request, the backend:
 4. escalates automatically if nobody accepts within the configured response window
 5. stops all further escalation as soon as one donor accepts
 
-## Security and Abuse Controls
+## 🛡️ Security and Abuse Controls
 
 - JWT authentication with role-aware route protection
 - verified-hospital enforcement for organ request creation
@@ -137,55 +220,44 @@ For each pending request, the backend:
 - admin security overview for flagged and blocked users
 - audit trail for registration, hospital verification, matching, reliability changes, and status updates
 
-## Dashboard Coverage
+## 📊 Dashboard Coverage
 
 - Donor dashboard: incoming requests, availability toggle, organ preferences, trust score, notifications
 - Patient dashboard: blood request creation and live request tracking
 - Hospital dashboard: verification profile workflow, organ request creation, matched donor list, donation completion confirmation
 - Admin dashboard: hospital verification queue, user blocking controls, fraud review, audit logs
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 blood/
 +- backend/
-¦  +- src/
-¦  ¦  +- config/
-¦  ¦  +- controllers/
-¦  ¦  +- jobs/
-¦  ¦  +- middleware/
-¦  ¦  +- models/
-¦  ¦  +- routes/
-¦  ¦  +- services/
-¦  ¦  +- utils/
-¦  ¦  +- app.js
-¦  ¦  +- server.js
-¦  +- package.json
+|  +- src/
+|  |  +- config/
+|  |  +- controllers/
+|  |  +- jobs/
+|  |  +- middleware/
+|  |  +- models/
+|  |  +- routes/
+|  |  +- services/
+|  |  +- utils/
+|  |  +- app.js
+|  |  +- server.js
+|  +- package.json
 +- frontend/
-¦  +- src/
-¦  ¦  +- api/
-¦  ¦  +- components/
-¦  ¦  +- context/
-¦  ¦  +- pages/
-¦  ¦  +- App.jsx
-¦  ¦  +- main.jsx
-¦  +- package.json
+|  +- src/
+|  |  +- api/
+|  |  +- components/
+|  |  +- context/
+|  |  +- pages/
+|  |  +- App.jsx
+|  |  +- main.jsx
+|  +- package.json
 +- README.md
 ```
 
-# Project Live Deployment
-
-## Live Demo
-
-- **Frontend:** [https://frontend-url.com](https://bio-sync-s9qt.vercel.app/)
-- **Backend/API:** [https://backend-url.com](https://bio-sync.onrender.com)
-
-## Source Code
-
-- **GitHub Repository:** [https://github.com](https://github.com/ShivamRaj01S/BIO-SYNC)
-## Notes
+## 📝 Notes
 
 - The frontend stores the JWT in local storage for development convenience. Use secure cookies and HTTPS for production hardening.
 - `MAPS_API_KEY` is optional because donor search currently uses MongoDB geospatial queries. Keep the variable if you later add reverse geocoding or route-distance services.
 - If you are upgrading from the older profile-based version, the server syncs legacy donor and hospital profile data into the expanded `User` schema on startup.
-  
