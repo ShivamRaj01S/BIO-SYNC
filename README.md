@@ -14,73 +14,67 @@ Full-stack platform for donors, patients, hospitals, and admins with role-based 
 
 Here is a visual walk-through of the platform's key features:
 
-<details>
-<summary><b>Click to view full Screenshot Walkthrough</b></summary>
+<!-- <details>
+<summary><b>Click to view full Screenshot Walkthrough</b></summary> -->
 
-### Screenshot
+### Landing Page
 <img src="screenshot/Screenshot 2026-04-19 153753.png" width="800" />
 
-### Screenshot
+### Register Page
 <img src="screenshot/Screenshot 2026-04-19 153823.png" width="800" />
 
-### Screenshot
+### Role Selection
 <img src="screenshot/Screenshot 2026-04-19 153858.png" width="800" />
 
-### Screenshot
+### Google Oauth
 <img src="screenshot/Screenshot 2026-04-19 153937.png" width="800" />
 
-### Screenshot
+### Hospital Role Dashboard
 <img src="screenshot/Screenshot 2026-04-19 154310.png" width="800" />
 
-### Screenshot
+### Location Ui for visual
 <img src="screenshot/Screenshot 2026-04-19 154321.png" width="800" />
 
-### Screenshot
+### Admin page (verification of hospital)
 <img src="screenshot/Screenshot 2026-04-19 154412.png" width="800" />
 
-### Screenshot
+### Email Notification
 <img src="screenshot/Screenshot 2026-04-19 154503.png" width="800" />
 
-### Screenshot
+### Hospital verified(by admin) email notification
 <img src="screenshot/Screenshot 2026-04-19 154516.png" width="800" />
 
-### Screenshot
+### Verified Hospital eligible for organ request
 <img src="screenshot/Screenshot 2026-04-19 154532.png" width="800" />
 
-### Screenshot
+### BIO SYNC
 <img src="screenshot/Screenshot 2026-04-19 154550.png" width="800" />
 
-### Screenshot
+### BIO SYNC - Role Based 
 <img src="screenshot/Screenshot 2026-04-19 154622.png" width="800" />
 
-### Screenshot
+### Admin Page - Audit Log page
 <img src="screenshot/Screenshot 2026-04-19 154646.png" width="800" />
 
-### Screenshot
+### Admin Page - User Control
 <img src="screenshot/Screenshot 2026-04-19 154657.png" width="800" />
 
-### Screenshot
+### MongoDB - collection -document
 <img src="screenshot/Screenshot 2026-04-19 154836.png" width="800" />
 
-### Screenshot
+### Donor DashBoard
 <img src="screenshot/Screenshot 2026-04-19 155519.png" width="800" />
 
-### Screenshot
+### Patient Dashboard
 <img src="screenshot/Screenshot 2026-04-19 155805.png" width="800" />
 
-### Screenshot
-<img src="screenshot/Screenshot 2026-04-19 155820.png" width="800" />
-
-### Screenshot
-<img src="screenshot/Screenshot 2026-04-19 171453.png" width="800" />
-
-### Screenshot
+### Notification Dashboard for users
 <img src="screenshot/Screenshot 2026-04-19 171733.png" width="800" />
 
-### Screenshot
+### Live Tracking of Request
 <img src="screenshot/Screenshot 2026-04-19 171800.png" width="800" />
 
-### Screenshot
+### Google Map Ui 
 <img src="screenshot/Screenshot 2026-04-19 171812.png" width="800" />
 
 </details>
@@ -155,7 +149,7 @@ This codebase now follows an ISA-style layered structure:
 
 ## 🚀 Local Setup Guide
 
-### Screenshot
+
 
 ```powershell
 cd backend
@@ -165,7 +159,7 @@ npm run seed:admin
 npm run dev
 ```
 
-### Screenshot
+
 
 ```powershell
 cd frontend
@@ -174,7 +168,7 @@ npm install
 npm run dev
 ```
 
-### Screenshot
+
 
 ```text
 Frontend: http://localhost:5173
